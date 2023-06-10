@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbjn5w1iadnor"]
+
+[ext_resource type="Script" path="res://Pause.gd" id="1_rjwbn"]
+[ext_resource type="FontFile" uid="uid://lcffolxpq7uc" path="res://data/ASSETS/fonts/Meltingdizon-Regular.otf" id="1_rstor"]
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_rjwbn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 1316.0
+offset_bottom = 728.0
+color = Color(0, 0, 0, 0.396078)
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color(0.466667, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.0
+offset_top = 90.0
+offset_right = 84.0
+offset_bottom = 139.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_rstor")
+theme_override_font_sizes/font_size = 50
+text = "PAUSED
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume" type="Button" parent="ColorRect"]
+modulate = Color(1, 0, 0.0705882, 1)
+layout_mode = 0
+offset_left = 544.0
+offset_top = 235.0
+offset_right = 731.0
+offset_bottom = 289.0
+scale = Vector2(1, 0.964219)
+theme_override_fonts/font = ExtResource("1_rstor")
+theme_override_font_sizes/font_size = 30
+text = "RESUME"
+
+[node name="restart" type="Button" parent="ColorRect"]
+modulate = Color(1, 0, 0.0705882, 1)
+layout_mode = 0
+offset_left = 545.0
+offset_top = 306.0
+offset_right = 732.0
+offset_bottom = 360.0
+scale = Vector2(1, 0.964219)
+theme_override_fonts/font = ExtResource("1_rstor")
+theme_override_font_sizes/font_size = 30
+text = "RESTART"
+
+[node name="exit" type="Button" parent="ColorRect"]
+modulate = Color(1, 0, 0.0705882, 1)
+layout_mode = 0
+offset_left = 543.0
+offset_top = 369.0
+offset_right = 730.0
+offset_bottom = 423.0
+scale = Vector2(1, 0.964219)
+theme_override_fonts/font = ExtResource("1_rstor")
+theme_override_font_sizes/font_size = 25
+text = "MAIN MENU"

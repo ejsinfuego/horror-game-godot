@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2qenh6s0r81b"]
+
+[ext_resource type="FontFile" uid="uid://lcffolxpq7uc" path="res://data/ASSETS/fonts/Meltingdizon-Regular.otf" id="1_71sbg"]
+
+[node name="Pause" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 1316.0
+offset_bottom = 728.0
+color = Color(0.286275, 0.286275, 0.286275, 0.968627)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.0
+offset_top = 234.0
+offset_right = 106.0
+offset_bottom = 309.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.47451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_71sbg")
+theme_override_font_sizes/font_size = 66
+text = "game over
+"
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0.129412)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 63.0
+offset_top = 46.0
+offset_right = 1255.0
+offset_bottom = 666.0

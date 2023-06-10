@@ -1,0 +1,338 @@
+[gd_scene load_steps=19 format=3 uid="uid://g371atnkxikr"]
+
+[ext_resource type="Script" path="res://Area3D.gd" id="1_2gj0t"]
+[ext_resource type="PackedScene" uid="uid://dhjkg835ag544" path="res://player.tscn" id="3_yiw65"]
+[ext_resource type="PackedScene" uid="uid://ci8pva5de3ay5" path="res://room_sample_less_material.tscn" id="4_2cbcq"]
+[ext_resource type="PackedScene" uid="uid://5dr1por52kjn" path="res://data/ASSETS/CHAIR.glb" id="4_tu65w"]
+[ext_resource type="FontFile" uid="uid://b628jwsgrcia5" path="res://data/ASSETS/fonts/veteran typewriter.ttf" id="5_7rwws"]
+[ext_resource type="Texture2D" uid="uid://cx4flk7f4vpdr" path="res://IT/ROOM_SAMPLE_2_Metal036_2K_Roughness-Metal036_2K_Roughness.png" id="5_yvk36"]
+[ext_resource type="PackedScene" uid="uid://cyho8sk5ayrgs" path="res://NPC/npc1.gltf" id="6_qkxd8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_flt5q"]
+size = Vector3(3.43731, 1, 3.45526)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4mdpp"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ecuff"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Theme" id="Theme_sserp"]
+
+[sub_resource type="Animation" id="Animation_usbfo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/Label2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/Label3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_w7c2k"]
+resource_name = "conv"
+length = 15.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/Label2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/Label3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 10, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cd6y1"]
+_data = {
+"RESET": SubResource("Animation_usbfo"),
+"conv": SubResource("Animation_w7c2k")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q844d"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.196078)
+albedo_texture = ExtResource("5_yvk36")
+
+[sub_resource type="BoxMesh" id="BoxMesh_lyp3n"]
+
+[sub_resource type="Sky" id="Sky_6bmt1"]
+
+[sub_resource type="Environment" id="Environment_55lx2"]
+background_mode = 2
+background_energy_multiplier = 4.22
+sky = SubResource("Sky_6bmt1")
+sky_custom_fov = 22.1
+ambient_light_source = 3
+ambient_light_color = Color(0.588235, 0.588235, 0.588235, 1)
+ambient_light_energy = 7.4
+reflected_light_source = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_albedo = Color(0.427451, 0.427451, 0.427451, 1)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.437561, 0, 0)
+script = ExtResource("1_2gj0t")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_flt5q")
+
+[node name="Node3D" parent="." instance=ExtResource("3_yiw65")]
+process_mode = 0
+transform = Transform3D(-0.124564, 0, 1.69543, 0, 1.7, 0, -1.69543, 0, -0.124564, 15.9099, 0.163373, -4.26875)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.25445, 0, 0, 0, 0.133626, 0, 0, 0, 6.50661, 0, -0.0500211, 0)
+mesh = SubResource("BoxMesh_4mdpp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ecuff")
+
+[node name="CHAIR" parent="." instance=ExtResource("4_tu65w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0762046, 0.0204815, 0.100492)
+
+[node name="ROOM_SAMPLE_LESS_MATERIAL" parent="." instance=ExtResource("4_2cbcq")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15.2396, 2.45339, -5.59962)
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="dialog" type="CanvasLayer" parent="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/dialog"]
+show_behind_parent = true
+offset_left = 112.0
+offset_top = 468.0
+offset_right = 1277.0
+offset_bottom = 663.0
+theme = SubResource("Theme_sserp")
+color = Color(0.266667, 0.266667, 0.266667, 0.509804)
+
+[node name="Label" type="Label" parent="CanvasLayer/dialog/ColorRect"]
+modulate = Color(0.423529, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.316
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 297.24
+offset_bottom = -40.5
+theme_override_fonts/font = ExtResource("5_7rwws")
+theme_override_font_sizes/font_size = 25
+text = "Isabel: There's no way you have come this far. How did you do it."
+
+[node name="Label2" type="Label" parent="CanvasLayer/dialog/ColorRect"]
+visible = false
+modulate = Color(0.423529, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.316
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 297.24
+offset_bottom = -40.5
+theme_override_fonts/font = ExtResource("5_7rwws")
+theme_override_font_sizes/font_size = 25
+text = "Isabel: We have to ask for help. I can't go outside this room. There are zombies."
+
+[node name="Label3" type="Label" parent="CanvasLayer/dialog/ColorRect"]
+visible = false
+modulate = Color(0.423529, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.316
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 297.24
+offset_bottom = -40.5
+theme_override_fonts/font = ExtResource("5_7rwws")
+theme_override_font_sizes/font_size = 25
+text = "Isabel: Look for something that we can use to ask for help. Please. Or we'll gonna die here.
+PAR"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/dialog"]
+autoplay = "conv"
+libraries = {
+"": SubResource("AnimationLibrary_cd6y1")
+}
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(15.3475, 0, 0, 0, 0.389253, 0, 0, 0, 20.6072, 10.1197, 5.12784, 0)
+material_override = SubResource("StandardMaterial3D_q844d")
+transparency = 0.79
+mesh = SubResource("BoxMesh_lyp3n")
+
+[node name="npc1" parent="." instance=ExtResource("6_qkxd8")]
+transform = Transform3D(-0.340757, 0, 1.6655, 0, 1.7, 0, -1.6655, 0, -0.340757, 14.4564, -0.0551736, -3.95999)
+
+[node name="Skeleton3D" parent="npc1/Armature" index="0"]
+bones/0/position = Vector3(4.37577, 2.20164, -96.0857)
+bones/1/position = Vector3(-0.345292, -1.8465, -0.0906358)
+bones/1/rotation = Quaternion(-0.0350126, -0.0207574, -0.0319673, 0.998659)
+bones/2/rotation = Quaternion(-0.0271162, 0.0160021, -0.0439551, 0.998537)
+bones/3/rotation = Quaternion(-0.00314166, 0.00171799, 0.00594776, 0.999976)
+bones/4/rotation = Quaternion(-0.00281173, 0.0019297, 0.00600853, 0.999976)
+bones/5/rotation = Quaternion(0.0402943, 0.00430548, -0.0297446, 0.998736)
+bones/6/rotation = Quaternion(0.0243041, 0.00382887, -0.0298099, 0.999253)
+bones/8/rotation = Quaternion(0.552396, 0.42506, -0.604096, 0.38633)
+bones/9/rotation = Quaternion(0.457427, -0.36666, 0.150801, 0.795976)
+bones/10/position = Vector3(-3.94101e-07, 25.5103, 1.35239e-05)
+bones/10/rotation = Quaternion(0.00798762, -0.00415176, 0.431694, 0.901975)
+bones/11/position = Vector3(-1.41988e-07, 24.5062, -1.10548e-05)
+bones/11/rotation = Quaternion(-0.0237786, -0.702143, -0.0504804, 0.709845)
+bones/12/position = Vector3(-2.92669, 3.01956, 1.24186)
+bones/12/rotation = Quaternion(0.149716, 0.0578645, 0.0771051, 0.984018)
+bones/13/rotation = Quaternion(0.00204279, -0.0337543, -0.0448139, 0.998423)
+bones/14/position = Vector3(0.152438, 3.07732, 6.87021e-06)
+bones/14/rotation = Quaternion(-0.0345421, -0.0384875, -0.0114206, 0.998597)
+bones/16/position = Vector3(-3.33707, 9.1363, 0.11776)
+bones/16/rotation = Quaternion(0.163884, 0.00807833, 0.0297372, 0.985998)
+bones/17/position = Vector3(0.00903937, 3.07592, -3.34841e-06)
+bones/17/rotation = Quaternion(0.232505, -8.81952e-05, -0.0328782, 0.972039)
+bones/18/position = Vector3(-0.00487756, 2.80021, -1.55857e-05)
+bones/18/rotation = Quaternion(0.197927, 0.000343823, -0.026028, 0.979871)
+bones/20/position = Vector3(-0.939729, 9.03272, -0.171641)
+bones/20/rotation = Quaternion(0.263203, 0.0130158, 0.0153657, 0.96453)
+bones/21/position = Vector3(0.00867387, 3.30743, 5.1892e-06)
+bones/21/rotation = Quaternion(0.272037, -0.000101165, -0.0377911, 0.961544)
+bones/22/rotation = Quaternion(0.275956, 0.000408606, -0.0362569, 0.960486)
+bones/24/position = Vector3(1.11487, 9.02654, -0.13852)
+bones/24/rotation = Quaternion(0.353536, 0.0170389, 0.00147812, 0.935265)
+bones/25/position = Vector3(0.00536025, 2.75114, -2.91145e-06)
+bones/25/rotation = Quaternion(0.368798, -0.000103175, -0.0504133, 0.928142)
+bones/26/position = Vector3(-0.00327015, 2.78929, 1.14738e-05)
+bones/26/rotation = Quaternion(0.18045, 0.000202922, -0.0237929, 0.983296)
+bones/28/position = Vector3(3.16194, 8.50603, 0.0546291)
+bones/28/rotation = Quaternion(0.393541, 0.032072, -0.0389029, 0.917923)
+bones/29/position = Vector3(0.00240084, 2.48007, 2.76899e-06)
+bones/29/rotation = Quaternion(0.310622, 0.0109736, -0.0088633, 0.950429)
+bones/30/rotation = Quaternion(0.304109, 0.000187763, -0.041353, 0.951739)
+bones/32/rotation = Quaternion(0.528724, -0.456551, 0.578884, 0.4206)
+bones/33/rotation = Quaternion(0.515774, 0.0567034, -0.0913321, 0.849953)
+bones/34/rotation = Quaternion(0.0107624, 0.00380293, -0.56847, 0.822624)
+bones/35/position = Vector3(-5.06232e-07, 24.5072, -6.19917e-06)
+bones/35/rotation = Quaternion(0.046223, 0.737759, 0.0309201, 0.672768)
+bones/36/rotation = Quaternion(0.154251, -0.0690849, -0.135158, 0.976302)
+bones/37/rotation = Quaternion(0.0149276, 0.0188931, 0.0187169, 0.999535)
+bones/38/rotation = Quaternion(-0.0240391, 0.0141705, 0.0220271, 0.999368)
+bones/40/position = Vector3(3.28393, 9.16789, 0.0119753)
+bones/40/rotation = Quaternion(-0.0745804, 0.00520474, -0.0618994, 0.995278)
+bones/41/position = Vector3(-0.00126543, 3.04289, 2.45612e-06)
+bones/41/rotation = Quaternion(0.163282, -1.11043e-05, 0.0198103, 0.98638)
+bones/42/position = Vector3(0.00194268, 2.86468, -9.16564e-06)
+bones/42/rotation = Quaternion(0.16492, -4.21608e-05, 0.0189964, 0.986124)
+bones/44/rotation = Quaternion(0.057163, -0.00480749, -0.046149, 0.997286)
+bones/45/position = Vector3(0.00244324, 3.19644, 1.58956e-05)
+bones/45/rotation = Quaternion(0.219064, -2.69505e-05, 0.0240727, 0.975413)
+bones/46/position = Vector3(-0.000631893, 3.18659, -9.39555e-06)
+bones/46/rotation = Quaternion(0.229237, 7.1425e-05, 0.0254461, 0.973038)
+bones/48/position = Vector3(-1.15223, 9.07761, -0.233439)
+bones/48/rotation = Quaternion(0.155326, -0.0056649, -0.0336752, 0.987273)
+bones/49/position = Vector3(0.00256827, 2.86962, -1.41923e-05)
+bones/49/rotation = Quaternion(0.299408, 9.72655e-06, 0.035303, 0.953472)
+bones/50/position = Vector3(-0.00265102, 2.69585, -1.53807e-05)
+bones/50/rotation = Quaternion(0.152374, 9.81044e-05, 0.018949, 0.988141)
+bones/52/position = Vector3(-3.08642, 8.3747, 0.153786)
+bones/52/rotation = Quaternion(0.234708, -0.0126424, -0.0238994, 0.971689)
+bones/53/position = Vector3(0.00319044, 2.53838, -2.04878e-06)
+bones/53/rotation = Quaternion(0.283692, -3.63181e-05, 0.0317325, 0.95839)
+bones/54/position = Vector3(-0.00187938, 2.14564, -1.81151e-05)
+bones/54/rotation = Quaternion(0.270748, 0.00021533, 0.031378, 0.962139)
+bones/56/rotation = Quaternion(-0.111312, -0.0971474, -0.988654, 0.0271213)
+bones/57/rotation = Quaternion(-0.293023, -0.0774608, 0.0454171, 0.95188)
+bones/58/rotation = Quaternion(0.596918, -0.204994, 0.0729275, 0.772235)
+bones/59/rotation = Quaternion(0.327166, -0.0519059, 0.0160439, 0.943404)
+bones/61/rotation = Quaternion(-0.0637571, 0.0840783, 0.993207, 0.0490524)
+bones/62/rotation = Quaternion(-0.192483, 0.0852451, -0.0370672, 0.976888)
+bones/63/rotation = Quaternion(0.51195, 0.105613, 0.0271978, 0.852063)
+bones/64/rotation = Quaternion(0.328515, 0.0514729, -0.0158872, 0.942961)
+
+[node name="AnimationPlayer" parent="npc1" index="1"]
+autoplay = "Talking"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_55lx2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 22, 60)
+light_color = Color(0.52549, 0.52549, 0.52549, 1)
+light_energy = 0.724
+light_indirect_energy = 10.103
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0931, 4.46807, -7.3856)
+
+[node name="end" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="end" to="." method="_on_end_timeout"]
+
+[editable path="npc1"]

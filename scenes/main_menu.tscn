@@ -1,0 +1,236 @@
+[gd_scene load_steps=12 format=3 uid="uid://b3bsd6d0q0j8w"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_6dsdu"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_sj2g0"]
+[ext_resource type="FontFile" uid="uid://bom1spa78aqeb" path="res://data/ASSETS/fonts/Them People.ttf" id="2_fjd7y"]
+[ext_resource type="FontFile" uid="uid://lcffolxpq7uc" path="res://data/ASSETS/fonts/Meltingdizon-Regular.otf" id="3_10k8l"]
+[ext_resource type="Texture2D" uid="uid://b4dmuhc3rwrx0" path="res://data/ASSETS/fonts/2.png" id="4_b41ib"]
+[ext_resource type="Texture2D" uid="uid://bnhetvecnhwle" path="res://data/ASSETS/fonts/3.png" id="5_ubclh"]
+[ext_resource type="Texture2D" uid="uid://c6u4e0b2leuv8" path="res://data/ASSETS/fonts/1.png" id="6_hdifp"]
+[ext_resource type="FontFile" uid="uid://b628jwsgrcia5" path="res://data/ASSETS/fonts/veteran typewriter.ttf" id="7_2du7e"]
+[ext_resource type="AudioStream" uid="uid://2spphdaiuhv6" path="res://data/ASSETS/the-hidden-shadows-a-donx27t-starve-together-song-122493.mp3" id="8_h2j3w"]
+[ext_resource type="PackedScene" uid="uid://qx3ei47wpi4v" path="res://IT.tscn" id="9_gqu70"]
+[ext_resource type="Script" path="res://scenes/credits.gd" id="10_l21ox"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_sj2g0")
+
+[node name="main" type="Node3D" parent="."]
+
+[node name="menu" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("1_6dsdu")
+
+[node name="ColorRect" type="ColorRect" parent="menu"]
+offset_left = 86.0
+offset_top = 86.0
+offset_right = 1280.0
+offset_bottom = 703.0
+color = Color(0.435294, 0.435294, 0.435294, 0)
+
+[node name="Label2" type="Label" parent="menu/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -14.0
+offset_top = 22.0
+offset_right = 1009.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("2_fjd7y")
+theme_override_font_sizes/font_size = 80
+text = "HINAGIBAN KAN UNIBERSIDAD"
+
+[node name="Label" type="Label" parent="menu/ColorRect"]
+modulate = Color(0.521569, 0, 0, 1)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 10.0
+offset_right = 1017.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("2_fjd7y")
+theme_override_font_sizes/font_size = 80
+text = "HINAGIBAN KAN UNIBERSIDAD"
+
+[node name="play" type="Button" parent="menu/ColorRect"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 202.0
+offset_right = 202.0
+offset_bottom = 265.0
+theme_override_colors/font_color = Color(0.662745, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_10k8l")
+theme_override_font_sizes/font_size = 35
+text = "PLAY"
+
+[node name="settings" type="Button" parent="menu/ColorRect"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 274.0
+offset_right = 202.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0.662745, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_10k8l")
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS
+"
+
+[node name="credits" type="Button" parent="menu/ColorRect"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 354.0
+offset_right = 202.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0.662745, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_10k8l")
+theme_override_font_sizes/font_size = 30
+text = "CREDITS
+"
+
+[node name="exit" type="Button" parent="menu/ColorRect"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 458.0
+offset_right = 202.0
+offset_bottom = 530.0
+theme_override_colors/font_color = Color(0.662745, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_10k8l")
+theme_override_font_sizes/font_size = 30
+text = "EXIT
+"
+
+[node name="2" type="Sprite2D" parent="menu/ColorRect"]
+position = Vector2(1093, 183)
+scale = Vector2(0.038, 0.038)
+texture = ExtResource("4_b41ib")
+
+[node name="3" type="Sprite2D" parent="menu/ColorRect"]
+position = Vector2(1093, 313)
+scale = Vector2(0.039, 0.039)
+texture = ExtResource("5_ubclh")
+
+[node name="1" type="Sprite2D" parent="menu/ColorRect"]
+position = Vector2(1095, 442)
+scale = Vector2(0.037, 0.037)
+texture = ExtResource("6_hdifp")
+
+[node name="Label3" type="Label" parent="menu/ColorRect"]
+modulate = Color(0.976471, 0, 0.0392157, 1)
+layout_mode = 0
+offset_left = 722.0
+offset_top = 170.0
+offset_right = 969.0
+offset_bottom = 554.0
+theme_override_fonts/font = ExtResource("7_2du7e")
+theme_override_font_sizes/font_size = 25
+text = "Controls:
+W A S D for movement
+Space bar for jump
+P to play
+C for credits
+e to exit
+esc to pause
+hold shift for hint"
+
+[node name="bg" type="AudioStreamPlayer" parent="menu"]
+stream = ExtResource("8_h2j3w")
+autoplay = true
+
+[node name="ITblend" parent="." instance=ExtResource("9_gqu70")]
+
+[node name="credits" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("10_l21ox")
+
+[node name="ColorRect" type="ColorRect" parent="credits"]
+offset_left = 344.0
+offset_top = 200.0
+offset_right = 432.0
+offset_bottom = 235.0
+scale = Vector2(7.92, 12.36)
+color = Color(0.529412, 0.529412, 0.529412, 0.827451)
+
+[node name="Label3" type="Label" parent="credits"]
+modulate = Color(0.603922, 0, 0, 1)
+offset_left = 560.0
+offset_top = 256.0
+offset_right = 808.0
+offset_bottom = 282.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_2du7e")
+text = "pixabay.com for music and audios"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="credits/Label3"]
+modulate = Color(0.603922, 0, 0, 1)
+layout_mode = 0
+offset_top = -24.0
+offset_right = 241.0
+offset_bottom = 2.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_2du7e")
+text = "mixamo.com for 3D Characters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="credits"]
+modulate = Color(0.603922, 0, 0, 1)
+offset_left = 528.0
+offset_top = 312.0
+offset_right = 840.0
+offset_bottom = 356.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_2du7e")
+text = "Game Engine: Godot 4.0
+Blender 3.5 for Nodelling of Environment"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="credits"]
+modulate = Color(0.603922, 0, 0, 1)
+offset_left = 528.0
+offset_top = 376.0
+offset_right = 840.0
+offset_bottom = 530.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_2du7e")
+text = "Team
+
+Tristan Dizon - Designer
+Edzel John Sinfuego - Programmer
+Sally Perillo - Quality Analyst
+Johnrenel Pantila - Marketing Strategist
+Bryan Casin - Others"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="credits"]
+modulate = Color(0.564706, 0, 0, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 112.0
+offset_right = 86.0
+offset_bottom = 173.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_fjd7y")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+
+[node name="back_credits" type="Button" parent="credits"]
+modulate = Color(1, 0, 0, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 560.0
+offset_right = 92.0
+offset_bottom = 600.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_10k8l")
+theme_override_font_sizes/font_size = 20
+text = "back
+"
+
+[connection signal="pressed" from="menu/ColorRect/play" to="." method="_on_play_pressed"]

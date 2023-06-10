@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0nt3ldhs6sfr"]
+
+[ext_resource type="Script" path="res://pinaka_final.gd" id="1_emp6y"]
+[ext_resource type="PackedScene" uid="uid://b3bsd6d0q0j8w" path="res://main_menu.tscn" id="1_nyin3"]
+
+[node name="pinaka_final" type="Node3D"]
+script = ExtResource("1_emp6y")
+
+[node name="playing" type="Node3D" parent="."]
+
+[node name="men" type="Node3D" parent="."]
+
+[node name="main_menu" parent="men" instance=ExtResource("1_nyin3")]
+
+[editable path="men/main_menu"]
