@@ -1,5 +1,6 @@
 # horror-game-godot
-Third Person 3D Game. 
+
+The name of the game is HINAGIBAN KAN UNIBERSIDAD. 3rd Person 3D Game for our college final project.
 
 https://drive.google.com/file/d/1DSjlew6v7gjN5ABELfVNFFjsSUi0RbI8/view?usp=sharing
 
