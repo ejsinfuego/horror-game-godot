@@ -1,4 +1,7 @@
 # Hinagiban Kan Unibersidad
+<meta name="description" content="3D Horror Game">
+<meta name="keywords" content="Godot, Third Person">
+<meta name="author" content="Ej Sinfuego>
 
   A 3rd Person 3D Horror Game for our semester's final project.
 
