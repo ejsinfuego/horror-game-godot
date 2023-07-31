@@ -1,6 +1,6 @@
-# Horror-game-godot
+# Hinagiban Kan Unibersidad
 
-The name of this game is HINAGIBAN KAN UNIBERSIDAD. 3rd Person 3D Game for our college final project.
+  A 3rd Person 3D Horro Game for our semester's final project.
 
 ![5](https://github.com/ejsinfuego/horror-game-godot/assets/67304574/e77c14aa-2119-4640-8907-ce0235e93f11)
 
