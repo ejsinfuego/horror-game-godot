@@ -6,7 +6,10 @@
 
 
 
-![]https://github.com/ejsinfuego/horror-game-godot/assets/67304574/57f8dadc-bb17-4f05-aa02-9f5fcd837f4b
+<video width="320" height="240" controls>
+  <source src="https://github.com/ejsinfuego/horror-game-godot/assets/67304574/57f8dadc-bb17-4f05-aa02-9f5fcd837f4b" type="video/mp4">
+</video>
+
 
 You can have a demo of the game through this file: [https://drive.google.com/file/d/1DSjlew6v7gjN5ABELfVNFFjsSUi0RbI8/view?usp=sharing](https://drive.google.com/file/d/17Y3dEtXq0aZjXJ3j3_GyGYGIb9WjNXtM/view?usp=sharing)
 
