@@ -1,6 +1,6 @@
-# horror-game-godot
+# Horror-game-godot
 
-The name of the game is HINAGIBAN KAN UNIBERSIDAD. 3rd Person 3D Game for our college final project.
+The name of this game is HINAGIBAN KAN UNIBERSIDAD. 3rd Person 3D Game for our college final project.
 
 ![5](https://github.com/ejsinfuego/horror-game-godot/assets/67304574/e77c14aa-2119-4640-8907-ce0235e93f11)
 
@@ -11,4 +11,4 @@ This is the link for all the asset.
 
 The main character and NPCs were from mixamo.com. The audios are from pixabay.com.
 
-The environment was created by me and the textures are from blenderkit. 
+The environment and gameplay was created by me and my desginer, Tristan Don Dizon. The textures are from blenderkit. 
