@@ -8,7 +8,7 @@
 
 
 
-<video width="360" height="280" controls>
+<video width="1280" height="720" controls>
   <source src="https://github.com/ejsinfuego/horror-game-godot/assets/67304574/57f8dadc-bb17-4f05-aa02-9f5fcd837f4b" type="video/mp4">
 </video>
 
