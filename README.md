@@ -20,3 +20,5 @@ This is the link for all the asset: https://drive.google.com/file/d/1DSjlew6v7gj
 The main character and NPCs were from mixamo.com. The audios are from pixabay.com. We have had so much difficutly during development because our devices are not much powerful for this kind of game. Besides, this is the first time we explore game development using game engine.
 
 The environment and gameplay was created by me and my desginer, Tristan Don Dizon. The textures are from blenderkit. 
+
+! OPEN FOR COLLABORATION !
