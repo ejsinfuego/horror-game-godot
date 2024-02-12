@@ -21,4 +21,6 @@ The main character and NPCs were from mixamo.com. The audios are from pixabay.co
 
 The environment and gameplay was created by me and my desginer, Tristan Don Dizon. The textures are from blenderkit. 
 
-! OPEN FOR COLLABORATION !
+Open for colaboration and contribution
+
+Email: edzeljohnsinfuego@gmail.com
