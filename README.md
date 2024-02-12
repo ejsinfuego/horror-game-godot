@@ -23,9 +23,9 @@
     - Right: Punch
 
 ## **Features**:
-  ### - Ray Casting: Main Character can hit damage to enemies and kill them
-  ### - Quest System: Player has to look for hidden quest accross map
-  ### - NPC: Player can talk to NPC (pre script)
+    - Ray Casting: Main Character can hit damage to enemies and kill them
+    - Quest System: Player has to look for hidden quest accross map
+    - NPC: Player can talk to NPC (pre script)
 
 This is the link for all the asset: https://drive.google.com/file/d/1DSjlew6v7gjN5ABELfVNFFjsSUi0RbI8/view?usp=sharing
 
