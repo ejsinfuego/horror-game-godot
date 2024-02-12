@@ -15,17 +15,17 @@
 
 You can have a demo of the game through this file: [https://drive.google.com/file/d/1DSjlew6v7gjN5ABELfVNFFjsSUi0RbI8/view?usp=sharing](https://drive.google.com/file/d/17Y3dEtXq0aZjXJ3j3_GyGYGIb9WjNXtM/view?usp=sharing)
 
-Player Movement:
-  WASD: Foward, Left, Backward, Right Movement
-  Shift: Sprint
-  Space: Jump
-  Left Mouse: Kick
-  Right: Punch
+**Player Movement**:
+  ###  - WASD: Foward, Left, Backward, Right Movement
+  ###  - Shift: Sprint
+  ###  - Space: Jump
+  ###  - Left Mouse: Kick
+  ###  - Right: Punch
 
-Features:
-  Ray Casting: Main Character can hit damage to enemies and kill them
-  Quest: Player has to look for hidden quest accross map
-  NPC: Player can talk to NPC (pre script)
+**Features**:
+  ### - Ray Casting: Main Character can hit damage to enemies and kill them
+  ### - Quest System: Player has to look for hidden quest accross map
+  ### - NPC: Player can talk to NPC (pre script)
 
 This is the link for all the asset: https://drive.google.com/file/d/1DSjlew6v7gjN5ABELfVNFFjsSUi0RbI8/view?usp=sharing
 
